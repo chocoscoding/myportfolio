@@ -1,23 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from 'react';
+import './styles/App.css';
+import {Routes, Route, Link} from 'react-router-dom'
+import { db } from './firebase-config';
+
+import { collection, getDocs } from 'firebase/firestore';
+{/* <Navbar/>
+
+<Header/>
+<About/>
+<Stacks/>
+<SingleProjects/>
+<SubFooter/>
+
+<MainFooter/>  */}
 
 function App() {
+
+  const [projects, setProjects] = useState([]);
+  const userCollection = collection(db, 'projects');
+
+  useEffect(() => {
+    const getProjects = async () => {
+      const data = await getDocs(userCollection);
+      const response = data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+      setProjects(response)
+      console.log(response);
+    }
+    getProjects();
+
+  }, [])
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      fklkflsdfl
     </div>
   );
 }
