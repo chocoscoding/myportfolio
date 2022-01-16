@@ -1,0 +1,184 @@
+* {
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+
+.navcont {
+  width: 100%;
+  position: fixed;
+  max-width: 1600px;
+  margin: auto;
+  z-index: 3;
+}
+
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav {
+  width: 100%;
+  padding: 0 1.5rem 0 1.5rem;
+  height: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media screen and (max-width: 350px) {
+  nav {
+    padding: 0 0.5rem 0 0.5rem;
+  }
+}
+
+.navs {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 4rem;
+  position: relative;
+  width: 60%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: 400;
+  font-size: 1.4rem;
+  overflow: auto;
+}
+
+.navs::-webkit-scrollbar {
+  background-color: transparent;
+  width: 0.3rem;
+  overflow: hidden;
+  height: 50%;
+}
+
+.navs::-webkit-scrollbar-thumb {
+  background-color: #80808036;
+  border-radius: 10px;
+}
+
+.navs li {
+  padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+}
+
+.navs li .line {
+  width: inherit;
+  height: 2px;
+  border: none;
+  background-color: #19203D;
+}
+
+.navs li .lineActive {
+  background-color: #667bd1;
+}
+
+@media screen and (max-width: 750px) {
+  .navs li {
+    margin-bottom: 2rem;
+    width: 100%;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  .navs {
+    font-size: 1.05rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .navs {
+    width: 70% !important;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .navs {
+    backdrop-filter: blur(18px) saturate(176%);
+    -webkit-backdrop-filter: blur(18px) saturate(176%);
+    background-color: rgba(255, 255, 255, 0.11);
+    border-radius: 12px;
+    border: 1px solid rgba(209, 213, 219, 0.3);
+    padding-top: 1rem;
+    overflow: auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 90% !important;
+    margin-right: 5%;
+    position: absolute;
+    top: 4rem;
+    height: calc(100vh - 5rem);
+    right: 0;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .navs {
+    width: 98% !important;
+    margin-right: 1%;
+  }
+}
+
+.iconcont {
+  padding: 1%;
+  display: none;
+  cursor: pointer;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.iconcont #icon {
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  height: 1.5em !important;
+  width: 1.5em !important;
+}
+
+@media screen and (max-width: 750px) {
+  .iconcont {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.navclose {
+  width: 0 !important;
+  overflow: hidden;
+  border: none;
+}
+
+@media screen and (min-width: 751px) {
+  .navclose {
+    width: auto !important;
+  }
+}
+/*# sourceMappingURL=navbar.css.map */

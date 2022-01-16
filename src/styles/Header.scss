@@ -1,0 +1,57 @@
+header{
+    position: relative;
+    height: 37rem;
+    width: 100%;
+    max-width: 1600px;
+    margin: auto;
+
+}
+#asset1{
+    position: absolute;
+    display: block;
+    z-index: -3;
+    left: -1%;
+    top: 28%;
+
+    @media screen and (max-width: 750px) {
+        width: 15em;
+        height: 15em;
+        opacity: 60%;
+        left: -5rem;
+        top: 45%;
+    }
+    @media screen and (max-width: 350px) {
+        width: 10em;
+        height: 10em;
+        left: -3.5rem;
+
+    }
+}
+#asset2{
+    position: absolute;
+    width: 20em;
+    height: 20em;
+    display: block;
+    z-index: -3;
+    right: 14%;
+    top: 17%;
+    opacity: 90%;
+
+    @media screen and(min-width: 1600px) {
+        width: 27em;
+        height: 27em;
+    }
+    @media screen and (max-width: 750px) {
+        width: 15em;
+        height: 15em;
+        opacity: 60%;
+        right: 9%;
+
+    }
+    @media screen and (max-width: 350px) {
+        width: 10em;
+        height: 10em;
+        right: -1rem;
+
+    }
+}
