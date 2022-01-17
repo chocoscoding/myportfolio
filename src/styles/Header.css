@@ -176,8 +176,8 @@ header .container .contactme:hover {
 
 @media screen and (max-width: 500px) {
   header {
-    height: auto;
     padding-bottom: 2.0rem;
+    height: auto;
   }
 }
 
