@@ -148,7 +148,7 @@ header .container .contactme {
 @media screen and (max-width: 500px) {
   header .container {
     width: 100%;
-    margin-left: 1%;
+    margin-left: 2%;
     margin-top: 2rem;
     height: auto;
   }
