@@ -8,6 +8,13 @@ const Header = () => {
       <header>
         <Asset1 id="asset1"/>
         <Asset2 id="asset2" />
+
+        <div className="container">
+          <p className="firstline">Hi, I'm Oluwatimileyin</p>
+          <p className="skill">SOFTWARE <br /> DEVELOPER</p>
+          <p className="lasttext">I like to craft solid and scalable frontend products with great user experiences.</p>
+          <button className="contactme">Contact Me</button>
+        </div>
       </header>
     </>
   );

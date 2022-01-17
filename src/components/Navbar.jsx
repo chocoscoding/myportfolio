@@ -6,16 +6,16 @@ import {GiHamburgerMenu} from 'react-icons/gi'
 import { ReactComponent as Logo} from '../Assests/logo.svg' 
 const Navbar = () => {
     const [hamburger, setHamburger] = useState(false);
-    function addlight(){
-        const elements = document.querySelectorAll('li');
-        const url = 'home';
-        elements.forEach((element) =>{
-            const final = element.textContent.toLowerCase().replace(/\s/g, "");
-            console.log(final);
-        })
-        console.log(elements);
+    // function addlight(){
+    //     const elements = document.querySelectorAll('li');
+    //     const url = 'home';
+    //     elements.forEach((element) =>{
+    //         const final = element.textContent.toLowerCase().replace(/\s/g, "");
+    //         console.log(final);
+    //     })
+    //     console.log(elements);
 
-    }
+    // }
     return (
         <div className="navcont">
 

@@ -3,7 +3,163 @@ header {
   height: 37rem;
   width: 100%;
   max-width: 1600px;
+  border: 1px solid transparent;
   margin: auto;
+  border: 1px solid white;
+}
+
+header .container {
+  width: 90%;
+  border: none;
+  height: 89%;
+  margin-top: 4rem;
+  margin-left: 10%;
+  border: 1px solid white;
+}
+
+header .container .firstline {
+  font-size: 2.4rem;
+  letter-spacing: 2.6px;
+  margin-left: 0.2em;
+}
+
+@media screen and (max-width: 600px) {
+  header .container .firstline {
+    font-size: 2.1rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  header .container .firstline {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 260px) {
+  header .container .firstline {
+    font-size: 1.3rem;
+  }
+}
+
+header .container .skill {
+  font-size: 8.9rem;
+  font-weight: 900;
+}
+
+@media screen and (max-width: 963px) {
+  header .container .skill {
+    font-size: 7.5rem;
+  }
+}
+
+@media screen and (max-width: 799px) {
+  header .container .skill {
+    font-size: 6.4rem;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  header .container .skill {
+    font-size: 5.6rem;
+  }
+}
+
+@media screen and (max-width: 591px) {
+  header .container .skill {
+    font-size: 5rem;
+  }
+}
+
+@media screen and (max-width: 529px) {
+  header .container .skill {
+    font-size: 4.7rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  header .container .skill {
+    margin: 0.5rem 0 0.5rem 0;
+    font-size: 4.6rem;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  header .container .skill {
+    font-size: 4.1rem;
+  }
+}
+
+@media screen and (max-width: 393px) {
+  header .container .skill {
+    font-size: 3.6rem;
+  }
+}
+
+@media screen and (max-width: 325px) {
+  header .container .skill {
+    font-size: 2.8rem;
+  }
+}
+
+@media screen and (max-width: 255px) {
+  header .container .skill {
+    font-size: 2.3rem;
+    font-weight: 700;
+  }
+}
+
+header .container .lasttext {
+  width: 56%;
+  letter-spacing: 1px;
+  font-size: 1.4rem;
+}
+
+@media screen and (max-width: 921px) {
+  header .container .lasttext {
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 586px) {
+  header .container .lasttext {
+    width: 99%;
+    font-size: 1.2rem;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+}
+
+header .container .contactme {
+  width: 10rem;
+  height: 3rem;
+  font-weight: 800;
+  margin-top: 1rem;
+  font-size: 1.15rem;
+}
+
+@media screen and (max-width: 586px) {
+  header .container .contactme {
+    width: 80%;
+    -webkit-transform: translate(10%, 0);
+            transform: translate(10%, 0);
+    border-radius: 10px;
+    border: none;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  header .container {
+    width: 100%;
+    margin-left: 1%;
+    margin-top: 2rem;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  header {
+    height: auto;
+  }
 }
 
 #asset1 {
@@ -11,7 +167,7 @@ header {
   display: block;
   z-index: -3;
   left: -1%;
-  top: 28%;
+  top: 38%;
 }
 
 @media screen and (max-width: 750px) {

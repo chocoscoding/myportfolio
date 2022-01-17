@@ -38,7 +38,6 @@ function App() {
       <Navbar/>
       <div style={{marginTop: '4rem'}}></div>
       <Header/>
-      <Header/>
     </div>
   );
 }
