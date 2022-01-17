@@ -89,7 +89,19 @@ header{
             font-weight: 800;
             margin-top: 1rem;
             font-size: 1.15rem;
+            cursor: pointer;
+            transition: 0.2s all ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #0f152d;
             
+            &:hover{
+                color: #fff;
+                border: 1px solid #fff;
+                background-color: transparent;
+                font-size: 1.2rem;
+            }
             
             @media screen and (max-width:586px) {
                 width: 80%;

@@ -133,6 +133,26 @@ header .container .contactme {
   font-weight: 800;
   margin-top: 1rem;
   font-size: 1.15rem;
+  cursor: pointer;
+  -webkit-transition: 0.2s all ease;
+  transition: 0.2s all ease;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #0f152d;
+}
+
+header .container .contactme:hover {
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: transparent;
+  font-size: 1.2rem;
 }
 
 @media screen and (max-width: 586px) {
