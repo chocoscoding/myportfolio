@@ -8,6 +8,7 @@ header {
 }
 
 header .container {
+  color: #CDD5F2;
   width: 90%;
   border: none;
   height: 89%;
@@ -186,7 +187,7 @@ header .container .contactme:hover {
   display: block;
   z-index: -3;
   left: -1%;
-  top: 38%;
+  top: 34%;
 }
 
 @media screen and (max-width: 750px) {

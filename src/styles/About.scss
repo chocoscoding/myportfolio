@@ -1,0 +1,94 @@
+.about-body{
+    width: 100%;
+
+    .container{
+        margin-left: 10%;
+
+        .main-text{
+            word-wrap: break-word;
+            line-break: strict;
+            width: 75%;
+            color: #CDD5F2;
+            letter-spacing: 2px;
+            font-size: 1.5rem;
+            font-weight: 200;
+            line-height: 134%;
+            margin-bottom: 1rem;
+
+            @media screen and (max-width: 820px) {
+                width: 85%;
+            }
+            @media screen and (max-width: 720px) {
+                width: 90%;
+            }
+            @media screen and (max-width: 520px) {
+                width: 96%;
+                font-size: 1.3rem;
+                font-weight: thin;
+            }
+            @media screen and (max-width: 300px) {
+                width: 96%;
+                font-size: 1.1rem;
+                font-weight:100;
+            }
+            @media screen and (max-width: 260px) {
+                width: 96%;
+                font-size: 0.9rem;
+                line-height: 134%;
+                font-weight:100;
+            }
+        }
+
+        .links-cont{
+            width: 45%;
+            max-width: 500px;
+            display: flex;
+            justify-content: space-between;
+            align-content: center;
+            flex-wrap: wrap;
+
+            .links{
+                width: 45%;
+                height: 4rem;
+                border: none;
+                background-color: #fff;
+                color: #0F152D;
+                text-align: center;
+                line-height: 4rem;
+                transition: 0.15s all ease;
+                margin: 0.4rem 0;
+                font-size: 1.3rem;
+
+                .icons{
+                    position: relative;
+                    top: 2.5px;
+                }
+
+                &:hover{
+                    border: 1px solid #fFF;
+                    background-color: transparent;
+                    color: #fff;
+                }
+
+                @media screen and (max-width: 450px) {
+                    width: 90%;
+                    height: 3.5rem;
+                    border-radius: 10px;
+                }
+            }
+
+            @media screen and (max-width: 600px) {
+                width: 96%;
+                justify-content: center;
+            }
+
+        }
+
+
+        @media screen and (max-width: 750px) {
+            width: 100%;
+            margin-left: 2%;
+        }
+    }
+
+}

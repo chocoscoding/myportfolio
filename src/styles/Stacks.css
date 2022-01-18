@@ -1,0 +1,87 @@
+.stacks {
+  padding-left: 10%;
+}
+
+.stacks .stacks-cont {
+  width: 70%;
+  max-width: 700px;
+}
+
+.stacks .stacks-cont .stack {
+  width: 100%;
+  max-width: 500px;
+  min-width: 239px;
+  height: 4rem;
+  margin: 0.4rem 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-top: 3px solid #cdd5f287;
+}
+
+.stacks .stacks-cont .stack p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.stacks .stacks-cont .stack .number {
+  width: 15%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 23px;
+  letter-spacing: 0.026em;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 460px) {
+  .stacks .stacks-cont .stack .number {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .stacks .stacks-cont .stack .number {
+    font-size: 14px;
+  }
+}
+
+.stacks .stacks-cont .stack .stackname {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  font-size: 34px;
+  padding-left: 0.5rem;
+  width: 85%;
+  font-weight: bold;
+  letter-spacing: 0.036em;
+}
+
+@media screen and (max-width: 460px) {
+  .stacks .stacks-cont .stack .stackname {
+    font-size: 29px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .stacks .stacks-cont .stack .stackname {
+    font-size: 19px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .stacks .stacks-cont {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .stacks {
+    padding-left: 2%;
+  }
+}
+/*# sourceMappingURL=Stacks.css.map */

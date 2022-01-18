@@ -1,0 +1,121 @@
+.about-body {
+  width: 100%;
+}
+
+.about-body .container {
+  margin-left: 10%;
+}
+
+.about-body .container .main-text {
+  word-wrap: break-word;
+  line-break: strict;
+  width: 75%;
+  color: #CDD5F2;
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+  font-weight: 200;
+  line-height: 134%;
+  margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 820px) {
+  .about-body .container .main-text {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .about-body .container .main-text {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .about-body .container .main-text {
+    width: 96%;
+    font-size: 1.3rem;
+    font-weight: thin;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .about-body .container .main-text {
+    width: 96%;
+    font-size: 1.1rem;
+    font-weight: 100;
+  }
+}
+
+@media screen and (max-width: 260px) {
+  .about-body .container .main-text {
+    width: 96%;
+    font-size: 0.9rem;
+    line-height: 134%;
+    font-weight: 100;
+  }
+}
+
+.about-body .container .links-cont {
+  width: 45%;
+  max-width: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.about-body .container .links-cont .links {
+  width: 45%;
+  height: 4rem;
+  border: none;
+  background-color: #fff;
+  color: #0F152D;
+  text-align: center;
+  line-height: 4rem;
+  -webkit-transition: 0.15s all ease;
+  transition: 0.15s all ease;
+  margin: 0.4rem 0;
+  font-size: 1.3rem;
+}
+
+.about-body .container .links-cont .links .icons {
+  position: relative;
+  top: 2.5px;
+}
+
+.about-body .container .links-cont .links:hover {
+  border: 1px solid #fFF;
+  background-color: transparent;
+  color: #fff;
+}
+
+@media screen and (max-width: 450px) {
+  .about-body .container .links-cont .links {
+    width: 90%;
+    height: 3.5rem;
+    border-radius: 10px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .about-body .container .links-cont {
+    width: 96%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .about-body .container {
+    width: 100%;
+    margin-left: 2%;
+  }
+}
+/*# sourceMappingURL=About.css.map */

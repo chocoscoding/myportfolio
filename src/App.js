@@ -1,17 +1,17 @@
 import React from 'react';
 import { useState, useEffect, useCallback } from 'react';
 import './styles/App.css';
-import {Routes, Route, Link} from 'react-router-dom'
+import { Routes, Route, Link } from 'react-router-dom'
 import { db } from './firebase-config';
-import {Navbar, Header} from './components/index'
-import { ReactComponent as Asset3} from './Assests/Asset3.svg';
+import {BsMouseFill} from 'react-icons/bs'
+import { Navbar, Header, About, Stacks } from './components/index'
+import { ReactComponent as Asset3 } from './Assests/Asset3.svg';
+import { ReactComponent as Asset4 } from './Assests/Asset3.svg';
 
 import { collection, getDocs } from 'firebase/firestore';
 {/* <Navbar/>
 
 <Header/>
-<About/>
-<Stacks/>
 <SingleProjects/>
 <SubFooter/>
 
@@ -20,7 +20,7 @@ import { collection, getDocs } from 'firebase/firestore';
 function App() {
 
   const [projects, setProjects] = useState([]);
-  
+
   // const getProjects = useCallback( async () => {
   //   const userCollection = collection(db, 'projects');
   //   const data = await getDocs(userCollection);
@@ -34,10 +34,19 @@ function App() {
   // },[getProjects])
   return (
     <div className="App">
-      <Asset3 id='asset3'/>
-      <Navbar/>
-      <div style={{marginTop: '4rem'}}></div>
-      <Header/>
+      <Asset3 id='asset3' />
+      <Navbar />
+      <div style={{ marginTop: '4rem' }}></div>
+      <Header />
+      <div className="scroll">
+       <p>  Scroll Down</p>
+         <br />
+        <BsMouseFill/>
+      </div>
+      <About />
+      <Asset4 id='asset4' />
+      <Stacks/>
+
     </div>
   );
 }
