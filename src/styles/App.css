@@ -129,7 +129,6 @@ body{
     text-decoration: underline;
     font-size: 5rem;
     width: fit-content !important;
-    border: 1px solid red;
 }
 .vap:hover{
     color: #cdd5f2;
