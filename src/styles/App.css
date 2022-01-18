@@ -31,8 +31,9 @@ body{
     position: absolute;
     display: block;
     z-index: -3;
-    left: -1%;
-    top: 34%;
+    left: -7%;
+    top: 46%;
+    opacity: 90%;
 }
 
 @media screen and (max-width: 750px) {
@@ -42,7 +43,7 @@ body{
         height: 15em;
         opacity: 60%;
         left: -5rem;
-        top: 45%;
+        top: 65%;
     }
 }
 @media screen and (max-width: 350px) {
@@ -53,6 +54,58 @@ body{
         left: -3.5rem;
     }
 
+}
+.projects{
+    width: 100%;
+}
+.projects .headingM{
+    margin-left: 10%;
+}
+.projects .projects-cont{
+    margin: auto;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 
+    repeat(auto-fit, minmax(250px, 380px));
+    align-content: center;
+    justify-content: space-evenly;
+    
+}
+.projects .projects-cont .project{
+    border-top: 3px solid #cdd5f2;
+    margin-bottom: 1rem;    
+}
+.projects .projects-cont .project .viewLive{
+    float: right;
+    display: flex;
+    transition: 0.3s all ease;
+    font-size: 100;
+    letter-spacing: 0.04em;
+    align-items: center;
+    padding: 0.4rem 0;
+}
+.projects .projects-cont .project .viewLive .icon{
+    font-size: 66px;
+    margin-left: 10px;
+}
+.projects .projects-cont .project img{
+    width: 100%;
+    height: auto;
+    margin-top: 0.5rem;
+}
+
+.namecont{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 3% 0.3%;
+    font-weight:bold;
+    margin-top: 2%;
+    letter-spacing: 0.04em;
+}
+.namecont .stack{
+    font-weight: 100;
+    letter-spacing: 0.01em;
 }
 .scroll{
     display: flex;
@@ -72,10 +125,22 @@ body{
     letter-spacing: 2.6px;
     color: #19203D;
 }
+.vap{
+    text-decoration: underline;
+    font-size: 5rem;
+    width: fit-content !important;
+    border: 1px solid red;
+}
+.vap:hover{
+    color: #cdd5f2;
+}
 @media screen and (max-width: 636px) {
     .headingM{
         font-size: 5.5rem;
 
+    }
+    .vap{
+        font-size: 4.5rem;
     }
 }
 @media screen and (max-width: 524px) {
@@ -83,11 +148,17 @@ body{
         font-size: 4.75rem;
 
     }
+    .vap{
+        font-size: 4.25rem;
+    }
 }
 @media screen and (max-width: 470px) {
     .headingM{
         font-size: 4rem;
 
+    }
+    .vap{
+        font-size: 3.85rem;
     }
 }
 @media screen and (max-width: 386px) {
