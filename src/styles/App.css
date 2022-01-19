@@ -3,7 +3,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    outline: none;
 }
+
 
 body{
     font-family: 'Clash Display', sans-serif;
@@ -36,6 +38,16 @@ body{
     opacity: 90%;
 }
 
+@media screen and (min-width: 1300px) {
+    #asset4{
+
+        width: 25em;
+        height: 25em;
+        opacity: 60%;
+        left: -2rem;
+        top: 60%;
+    }
+}
 @media screen and (max-width: 750px) {
     #asset4{
 
@@ -85,6 +97,7 @@ body{
     padding: 0.4rem 0;
 }
 .projects .projects-cont .project .viewLive .icon{
+    cursor: pointer;
     font-size: 66px;
     margin-left: 10px;
 }
@@ -129,9 +142,35 @@ body{
     text-decoration: underline;
     font-size: 5rem;
     width: fit-content !important;
+    cursor: pointer;
+    text-underline-offset: 10px;
+    color: #1c254d;
+    animation: highlight 2s ease infinite;
+    transition: 0.3s all ease;
+}
+@keyframes highlight {
+    0%{
+        color: #19203D;
+    }
+    50%{
+        color: #203074;
+    }
+    100%{
+        color: #19203D;
+    }
+}
+@keyframes highlight2 {
+    0%{
+        color: #19203D;
+    }
+    100%{
+        color: #cdd5f2;
+    }
 }
 .vap:hover{
     color: #cdd5f2;
+    animation: highlight2 1s ease 1;
+
 }
 @media screen and (max-width: 636px) {
     .headingM{
