@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 import {Header, About, Stacks, SingleProject2, MainFooter } from '../components/index';
 import { BsMouseFill, BsArrowUpRightCircle, BsArrowUpRightCircleFill } from 'react-icons/bs';
 
@@ -34,14 +34,14 @@ const Homepage = () => {
       <div className="projects">
         <p className="headingM">{'// Projects'}</p>
         <div className="projects-cont">
-          {staticData.map((Data) => (
-            <SingleProject2 staticData={Data} />
+          {staticData.map((Data, index) => (
+            <SingleProject2 key={index} staticData={Data} />
           ))}
         </div>
 
 
-        <p className="headingM viewLive vap" onMouseLeave={() => { setCurrentp(true) }} onMouseOver={() => { setCurrentp(false) }}>
-          View all projects {currentp ? (<BsArrowUpRightCircle className='icon' />) : (<BsArrowUpRightCircleFill className='icon' />)}
+        <p className="headingM viewLive vap" onMouseLeave={() => { setCurrentp(true) }} onMouseOver={() => { setCurrentp(false) }}> <a href='/allprojects'>
+          View all projects {currentp ? (<BsArrowUpRightCircle className='icon' />) : (<BsArrowUpRightCircleFill className='icon' />)}</a>
         </p>
         <MainFooter />
       </div>

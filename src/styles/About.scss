@@ -58,7 +58,10 @@
                 transition: 0.15s all ease;
                 margin: 0.4rem 0;
                 font-size: 1.3rem;
-
+                cursor: pointer;
+                a{
+                    all: unset;
+                }
                 .icons{
                     position: relative;
                     top: 2.5px;

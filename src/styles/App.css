@@ -149,6 +149,9 @@ body{
     animation: highlight 2s ease infinite;
     transition: 0.3s all ease;
 }
+.vap a {
+    all: unset;
+}
 @keyframes highlight {
     0%{
         color: #19203D;

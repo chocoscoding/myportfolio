@@ -1,6 +1,6 @@
 import React from 'react';
 import './styles/App.css';
-import { Routes, Route, Link } from 'react-router-dom'
+import { Routes, Route} from 'react-router-dom'
 import { Navbar } from './components/index'
 import { ReactComponent as Asset3 } from './Assests/Asset3.svg';
 import { ReactComponent as Asset4 } from './Assests/Asset1.svg';

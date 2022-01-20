@@ -82,6 +82,11 @@
   transition: 0.15s all ease;
   margin: 0.4rem 0;
   font-size: 1.3rem;
+  cursor: pointer;
+}
+
+.about-body .container .links-cont .links a {
+  all: unset;
 }
 
 .about-body .container .links-cont .links .icons {

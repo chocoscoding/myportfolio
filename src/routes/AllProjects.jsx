@@ -16,9 +16,14 @@ const AllProjects = () => {
 
   useEffect(() => {
     const getProjects = async () => {
-      const data = await getDocs(userCollection);
-      const response = data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
-      setProjects(response)
+      try {
+        const data = await getDocs(userCollection);
+        const response = data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+        setProjects(response)
+
+      } catch (error) {
+        console.log('ok');
+      }
     }
     getProjects();
 
@@ -41,14 +46,16 @@ const AllProjects = () => {
 
   if(projects.length <1){
     return (
-      <div>
-        LADING DATA...
+      <div style={{textAlign: 'center', fontSize: '2em'}}>
+        L0ADING DATA...
       </div>
     );
   }
 
   return (
+    
     <section className="allprojectfraction">
+      <div className="headingM" style={{color: "#cdd5f295", textAlign: 'center'}}>All Projects</div>
       <div className="allprojects">
         {projects.map((Data, index) => (
           <SingleProjects info={Data} openmore={openmore} key={index} />
