@@ -3,6 +3,10 @@
   transition: 0.15s all ease;
 }
 
+Link {
+  all: unset;
+}
+
 .navcont {
   width: 100%;
   position: fixed;
@@ -91,6 +95,12 @@ nav::after {
   border-radius: 10px;
   cursor: pointer;
   position: relative;
+}
+
+.navs li a {
+  color: inherit;
+  font-size: inherit;
+  text-decoration: none;
 }
 
 .navs li .line {

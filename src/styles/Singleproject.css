@@ -1,0 +1,23 @@
+.project{
+    border-top: 3px solid #cdd5f2;
+    margin-bottom: 1rem;    
+}
+.project .viewLive{
+    float: right;
+    display: flex;
+    transition: 0.3s all ease;
+    font-size: 100;
+    letter-spacing: 0.04em;
+    align-items: center;
+    padding: 0.4rem 0;
+}
+.project .viewLive .icon{
+    cursor: pointer;
+    font-size: 46px;
+    margin-left: 10px;
+}
+.project img{
+    width: 100%;
+    height: auto;
+    margin-top: 0.5rem;
+}

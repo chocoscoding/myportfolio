@@ -121,7 +121,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 1rem  1%;
+  padding: 1rem 1%;
   color: #cdd5f2;
   letter-spacing: 0.061em;
 }

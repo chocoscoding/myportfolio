@@ -1,0 +1,44 @@
+.allprojects {
+  width: 90%;
+  display: -ms-grid;
+  display: grid;
+  margin: 3rem auto;
+  -ms-grid-columns: (minmax(250px, 300px))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  position: relative;
+  top: 5%;
+}
+
+.moreinfo {
+  width: 100%;
+  height: 95vh;
+  top: 4rem;
+  margin: auto;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: rgba(240, 248, 255, 0.041);
+  border-radius: 10px;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+
+.openmoreinfo {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+/*# sourceMappingURL=Allprojects.css.map */

@@ -1,7 +1,7 @@
 import React from "react";
 import '../styles/Stacks.css'
 
-const stacklist = ['HTML 5', 'CSS', 'SCSS', 'TAILWIND', 'JAVASCRIPT', 'TYPESCRIPT', 'REACT', 'REDUX', 'NODE.JS', 'MONGO DB', 'FIREBASE'];
+const stacklist = ['HTML 5', 'CSS', 'TAILWIND', 'JAVASCRIPT', 'TYPESCRIPT', 'REACT', 'REDUX', 'NODE.JS', 'MONGO DB', 'FIREBASE'];
 
 function getfinalNum(index){
     const number = index + 1;

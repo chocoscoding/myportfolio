@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
-import {BsArrowUpRightCircle,BsArrowUpRightCircleFill} from 'react-icons/bs'
+import {BsArrowUpRightCircle,BsArrowUpRightCircleFill} from 'react-icons/bs';
+import '../styles/Singleproject.css'
+
 
 
 const SingleProject2 = ({staticData}) => {
