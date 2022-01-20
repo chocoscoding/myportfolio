@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {Header, About, Stacks, SingleProject2 } from '../components/index';
+import {Header, About, Stacks, SingleProject2, MainFooter } from '../components/index';
 import { BsMouseFill, BsArrowUpRightCircle, BsArrowUpRightCircleFill } from 'react-icons/bs';
 
 
@@ -43,6 +43,7 @@ const Homepage = () => {
         <p className="headingM viewLive vap" onMouseLeave={() => { setCurrentp(true) }} onMouseOver={() => { setCurrentp(false) }}>
           View all projects {currentp ? (<BsArrowUpRightCircle className='icon' />) : (<BsArrowUpRightCircleFill className='icon' />)}
         </p>
+        <MainFooter />
       </div>
         </>
     )

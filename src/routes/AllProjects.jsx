@@ -1,91 +1,101 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { SingleProjects } from "../components";
+import { BsArrowUpRightCircle } from "react-icons/bs";
+import { FaGithub } from "react-icons/fa";
 import "../styles/Allprojects.css";
-// import { db } from "../firebase-config";
+import { AiOutlineClose } from "react-icons/ai";
 
-const staticData = [
-  {
-    url: "https://firebasestorage.googleapis.com/v0/b/cdportfolio-95923.appspot.com/o/we%20(2).jpeg?alt=media&token=c17e2bce-0905-41e8-a0a1-eecae705c926",
-    name: "Tabloid",
-    stack: "//NODE, JS, CSS ...",
-    link: "https://tabloid-notes.herokuapp.com/",
-    key: 1,
-    id: "e34",
-  },
-  {
-    url: "https://firebasestorage.googleapis.com/v0/b/cdportfolio-95923.appspot.com/o/we%20(2).jpeg?alt=media&token=c17e2bce-0905-41e8-a0a1-eecae705c926",
-    name: "Tabloid",
-    stack: "//NODE, JS, CSS ...",
-    link: "https://tabloid-notes.herokuapp.com/",
-    key: 1,
-    id: "e34",
-  },
-  {
-    url: "https://firebasestorage.googleapis.com/v0/b/cdportfolio-95923.appspot.com/o/we%20(2).jpeg?alt=media&token=c17e2bce-0905-41e8-a0a1-eecae705c926",
-    name: "Tabloid",
-    stack: "//NODE, JS, CSS ...",
-    link: "https://tabloid-notes.herokuapp.com/",
-    key: 1,
-    id: "e34",
-  },
-  {
-    url: "https://firebasestorage.googleapis.com/v0/b/cdportfolio-95923.appspot.com/o/we%20(2).jpeg?alt=media&token=c17e2bce-0905-41e8-a0a1-eecae705c926",
-    name: "Tabloid",
-    stack: "//NODE, JS, CSS ...",
-    link: "https://tabloid-notes.herokuapp.com/",
-    key: 1,
-    id: "e34",
-  },
-  {
-    url: "https://firebasestorage.googleapis.com/v0/b/cdportfolio-95923.appspot.com/o/we%20(2).jpeg?alt=media&token=c17e2bce-0905-41e8-a0a1-eecae705c926",
-    name: "Tabloid",
-    stack: "//NODE, JS, CSS ...",
-    link: "https://tabloid-notes.herokuapp.com/",
-    key: 1,
-    id: "e34",
-  },
-  {
-    url: "https://firebasestorage.googleapis.com/v0/b/cdportfolio-95923.appspot.com/o/we%20(1).jpeg?alt=media&token=4dac2030-d726-41e8-b14a-9155238a0394",
-    name: "Weatherapp",
-    stack: "//NODE, JS, CSS ...",
-    link: "https://bestweatherappthisyear.vercel.app/",
-    key: 2,
-    id: "e34",
-  },
-];
+import { db } from "../firebase-config";
+import { collection, getDocs } from 'firebase/firestore';
+
 const AllProjects = () => {
   const [moreinfo, setMoreinfo] = useState(false);
+  const [projects, setProjects] = useState([]);
+  const [currentProject, setCurrentProject] = useState(null);
+  const userCollection = collection(db, 'projects');
+
+  useEffect(() => {
+    const getProjects = async () => {
+      const data = await getDocs(userCollection);
+      const response = data.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+      setProjects(response)
+    }
+    getProjects();
+
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
+
+
 
   const openmore = (state) => {
-    if (state === "open") {
+    const {status, id} = state
+    if (status === "open") {
+      let datafinal = projects.filter((data) => data.id === id)
+      setCurrentProject(datafinal)
       setMoreinfo(true);
     } else {
       setMoreinfo(false);
     }
   };
 
-  return (
-      <>
-            <div style={{ marginTop: '4rem' }}></div>
-    <div className="allprojects">
-      {staticData.map((Data, index) => (
-        <SingleProjects info={Data} openmore={openmore} key={index} />
-        ))}
-    </div>
-    
-      { moreinfo && (
-      <div
-        onClick={() => {
-            openmore("close");
-        }}
-        className={`${moreinfo? 'moreinfo openmoreinfo': 'moreinfo'}`}
-        >
-           <div className="infocont">
 
-           </div>
-      </div>)}
-      
-        </>
+  if(projects.length <1){
+    return (
+      <div>
+        LADING DATA...
+      </div>
+    );
+  }
+
+  return (
+    <section className="allprojectfraction">
+      <div className="allprojects">
+        {projects.map((Data, index) => (
+          <SingleProjects info={Data} openmore={openmore} key={index} />
+        ))}
+      </div>
+
+      {moreinfo && (
+        <div className="moreinfo">
+          <div className="infocont">
+            <AiOutlineClose
+              className="icon"
+              onClick={() => {
+                openmore("close");
+              }}
+            />
+            <div className="infocont-inner">
+              <img
+                src={currentProject[0].image}
+                alt={currentProject[0].projectName}
+                className="projectimage"
+              />
+              <div className="side">
+                <h3>About</h3>
+                <p>
+                  { currentProject[0].about}
+                </p>
+                <h3>Stacks</h3>
+                <p>{currentProject[0].Stack.toString()}</p>
+                <br />
+                <div className="linkto">
+                  <a href={currentProject[0].link}>
+                    <button className="link">
+                      View Site <BsArrowUpRightCircle className="icons" />{" "}
+                    </button>
+                  </a>
+                  <a href={currentProject[0].github}>
+                    <button className="link">
+                      View Code <FaGithub className="icons" />{" "}
+                    </button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+    </section>
   );
 };
 

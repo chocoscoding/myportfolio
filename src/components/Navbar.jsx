@@ -24,14 +24,12 @@ const Navbar = ({ scrollto }) => {
 
     switch (location.pathname) {
       case "/":
-        console.log(location.pathname);
         clearall();
         n1.className = "line lineActive";
         break;
       case "/allprojects":
         clearall();
         n3.className = "line lineActive";
-        console.log(location.pathname);
         break;
       // case '/about':
       //     console.log(location.pathname);
@@ -44,7 +42,6 @@ const Navbar = ({ scrollto }) => {
         clearall();
         break;
     }
-    console.log(location);
   }, [location]);
 
   const intersect = useCallback(() => {
@@ -84,10 +81,7 @@ const Navbar = ({ scrollto }) => {
       });
     },
     sectionOneOptions);
-    if(location.pathname === '/allprojects'){
-        sectionOneObserver.observe(ftr);
-    }
-    else if(location.pathname === '/'){
+     if(location.pathname === '/'){
         sectionOneObserver.observe(abt);
         sectionOneObserver.observe(ftr);
     }
