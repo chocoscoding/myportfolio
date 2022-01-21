@@ -86,12 +86,12 @@ const AllProjects = () => {
                 <p>{currentProject[0].Stack.toString()}</p>
                 <br />
                 <div className="linkto">
-                  <a href={currentProject[0].link}>
+                  <a href={currentProject[0].link} target="_blank" rel="nopener noreferrer">
                     <button className="link">
                       View Site <BsArrowUpRightCircle className="icons" />{" "}
                     </button>
                   </a>
-                  <a href={currentProject[0].github}>
+                  <a href={currentProject[0].github} target="_blank" rel="nopener noreferrer">
                     <button className="link">
                       View Code <FaGithub className="icons" />{" "}
                     </button>

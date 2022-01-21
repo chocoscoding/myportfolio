@@ -15,9 +15,9 @@ const MainFooter = () => {
         </p>
 
         <div className="linktoCont">
-          <a href="https://www.linkedin.com/in/oyetitimileyin/"><button className="linkto"> <FaLinkedinIn className="icon"/>LinkedIn </button></a>
-          <a href="mailto:chocoscoding@gmail.com"><button className="linkto"> <MdEmail className="icon"/>chocoscoding@gmail.com </button></a>
-          <a href="https://github.com/chocoscoding"><button className="linkto"> <BsGithub className="icon"/>Github </button></a>
+          <a href="https://www.linkedin.com/in/oyetitimileyin/" target="_blank" rel="nopener noreferrer"><button className="linkto"> <FaLinkedinIn className="icon"/>LinkedIn </button></a>
+          <a href="mailto:chocoscoding@gmail.com" target="_blank" rel="nopener noreferrer"><button className="linkto"> <MdEmail className="icon"/>chocoscoding@gmail.com </button></a>
+          <a href="https://github.com/chocoscoding" target="_blank" rel="nopener noreferrer"><button className="linkto"> <BsGithub className="icon"/>Github </button></a>
         </div>
       </div>
 
