@@ -150,7 +150,8 @@ body{
     transition: 0.3s all ease;
 }
 .vap a {
-    all: unset;
+    text-decoration: none;
+    color: inherit;
 }
 @keyframes highlight {
     0%{
